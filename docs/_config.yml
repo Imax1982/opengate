@@ -1,0 +1,15 @@
+title: OpenGate
+description: App mobile per controllo cancelli Home Assistant
+theme: minima
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+navigation:
+  - title: Documentazione
+    url: /
+  - title: Privacy Policy
+    url: /privacy
