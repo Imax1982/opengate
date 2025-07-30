@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenGate - Supporto</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        
+        .section p, .section li {
+            margin-bottom: 10px;
+        }
+        
+        .section ul {
+            padding-left: 20px;
+        }
+        
+        .contact-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .contact-info h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 8px;
+        }
+        
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .feature-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .feature-item strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .requirements {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        
+        .requirements h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏠 OpenGate</h1>
+            <p>Controllo intelligente del cancello con Home Assistant</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>📱 Informazioni sull'App</h2>
+                <p>OpenGate è un'applicazione mobile per iOS che ti permette di controllare il cancello di casa e altri dispositivi domotici attraverso Home Assistant. L'app offre un'interfaccia moderna e intuitiva per gestire i tuoi dispositivi smart.</p>
+                
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <strong>🚪 Controllo Cancello</strong>
+                        Apertura remota del cancello principale
+                    </div>
+                    <div class="feature-item">
+                        <strong>🎛️ Dispositivi Personalizzati</strong>
+                        Controllo di luci, prese e altri switch
+                    </div>
+                    <div class="feature-item">
+                        <strong>🗣️ Comandi Siri</strong>
+                        Integrazione con l'app Comandi di iOS
+                    </div>
+                    <div class="feature-item">
+                        <strong>🔧 Configurazione Facile</strong>
+                        Setup guidato per Home Assistant
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>⚙️ Configurazione</h2>
+                <p>Per utilizzare OpenGate, hai bisogno di:</p>
+                <ul>
+                    <li><strong>Home Assistant</strong> installato e configurato</li>
+                    <li><strong>Token di accesso</strong> a lunga durata di Home Assistant</li>
+                    <li><strong>Entity ID</strong> dei dispositivi che vuoi controllare</li>
+                    <li><strong>Connessione di rete</strong> tra il dispositivo iOS e Home Assistant</li>
+                </ul>
+                
+                <div class="requirements">
+                    <h4>⚠️ Requisiti di Sistema</h4>
+                    <p><strong>iOS:</strong> Versione 15.1 o superiore</p>
+                    <p><strong>Home Assistant:</strong> Versione 2023.1 o superiore</p>
+                    <p><strong>Rete:</strong> Wi-Fi o connessione locale al server Home Assistant</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🔧 Risoluzione Problemi</h2>
+                <h3>Problemi di Connessione</h3>
+                <ul>
+                    <li>Verifica che l'URL di Home Assistant sia corretto e raggiungibile</li>
+                    <li>Controlla che il token di accesso sia valido e non scaduto</li>
+                    <li>Assicurati che il dispositivo iOS sia sulla stessa rete di Home Assistant</li>
+                </ul>
+                
+                <h3>Problemi con i Dispositivi</h3>
+                <ul>
+                    <li>Verifica che gli Entity ID siano corretti e esistenti in Home Assistant</li>
+                    <li>Controlla che i dispositivi siano online e funzionanti</li>
+                    <li>Prova a riavviare Home Assistant se i dispositivi non rispondono</li>
+                </ul>
+                
+                <h3>Problemi con Siri</h3>
+                <ul>
+                    <li>Assicurati di aver configurato correttamente i comandi nell'app Comandi di iOS</li>
+                    <li>Verifica che Siri abbia i permessi necessari per utilizzare l'app</li>
+                    <li>Prova a ricreare il comando se non funziona correttamente</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>📞 Supporto e Contatti</h2>
+                <div class="contact-info">
+                    <h3>🛠️ Assistenza Tecnica</h3>
+                    <p><strong>Email:</strong> <a href="mailto:support@opengate-app.com">support@opengate-app.com</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/imax1982" target="_blank">https://github.com/imax1982</a></p>
+                    <p><strong>Tempo di risposta:</strong> 24-48 ore</p>
+                    
+                    <h3>🐛 Segnalazione Bug</h3>
+                    <p>Se riscontri problemi con l'app, invia una email con:</p>
+                    <ul>
+                        <li>Descrizione dettagliata del problema</li>
+                        <li>Versione di iOS e dell'app</li>
+                        <li>Screenshot o video del problema (se possibile)</li>
+                        <li>Log di errore da Home Assistant (se disponibile)</li>
+                    </ul>
+                    
+                    <h3>💡 Richieste di Funzionalità</h3>
+                    <p>Hai un'idea per migliorare OpenGate? Contattaci! Valutiamo sempre nuove funzionalità richieste dagli utenti.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>📄 Informazioni Legali</h2>
+                <p><strong>Versione App:</strong> 2.13</p>
+                <p><strong>Ultimo Aggiornamento:</strong> Luglio 2025</p>
+                <p><strong>Sviluppatore:</strong> Massimiliano</p>
+                <p><strong>Compatibilità:</strong> iOS 15.1+</p>
+                
+                <h3>🔒 Privacy</h3>
+                <p>OpenGate non raccoglie né memorizza dati personali sui nostri server. Tutti i dati di configurazione sono memorizzati localmente sul tuo dispositivo. La comunicazione avviene direttamente tra l'app e la tua istanza di Home Assistant.</p>
+                
+                <h3>⚖️ Licenza</h3>
+                <p>OpenGate è distribuita sotto licenza MIT. Il codice sorgente è disponibile su GitHub per la revisione e i contributi della community.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
